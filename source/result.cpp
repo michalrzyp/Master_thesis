@@ -97,8 +97,8 @@ void result::select_columns(const double x, const double y, const double r)
 			num_of_column_per_image_.push_back(angle_to_num_of_column((beta)));
 			//std::cout << "Number: " << count << " alpha: " << nearbyint(alpha * rad_to_deg_const)
 				//<< " beta: " << nearbyint(beta) << " gamma: " << nearbyint(gamma * rad_to_deg_const) << std::endl;
-			std::cout << "Number: " << count << " NoC " << angle_to_num_of_column((beta)) << std::endl;
-			gamma += ROTATION_ANGEL * 10;
+			//std::cout << "Number: " << count << " NoC " << angle_to_num_of_column((beta)) << std::endl;
+			gamma += ROTATION_ANGEL;
 			count++;
 		}
 	}

@@ -19,7 +19,7 @@ void read_image(int number);
 
 int main()
 {
-	int a, b, r;
+	double a, b, r;
 	std::cout << "Enter the offset along the X-axis: " << std::endl;
 	std::cin >> a;
 	std::cout << "Enter the offset along the Y-axis: " << std::endl;

@@ -2,7 +2,6 @@
 #include <string>
 #include <sstream>
 
-
 image::image()
 {
   number_of_column_ = 0;
@@ -55,16 +54,18 @@ void image::read_image_jpeg(const int number)
 	const auto file_name = oss.str();
 	jpeg_image_ = cv::imread(file_name);
 
-	if (jpeg_image_.empty())                      // Check for invalid input
+	if (jpeg_image_.empty())                      // Check for invalid  input
 	{
 		std::cout << "Could not open or find the image" << std::endl;
+		system("pause");
+		exit(0);
 	}
 }
 
 
 void image::cut_bmp_image_column(const int number) const
 {
-	for (auto j = 0; j < bmp_image_.height(); j++)
+	for (auto j = 0; j >= bmp_image_.height(); j++)
 	{
 		cut_column_bmp_->set_pixel(0, j, bmp_image_.get_pixel(number, j));
 	}
